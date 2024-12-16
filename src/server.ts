@@ -25,12 +25,12 @@ app.use(
   })
 );
 
+app.get("/", (req, res) => {
+  res.send("welcome!");
+});
+
 // routes
 app.use("/api/email", emailRoutes);
-
-app.get("/", (req, res)=>{
-  res.send("backend");
-});
 
 app.listen(port, async () => {
   // Connect to the database
