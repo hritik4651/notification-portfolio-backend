@@ -28,6 +28,10 @@ app.use(
 // routes
 app.use("/api/email", emailRoutes);
 
+app.get("/", (req, res)=>{
+  res.send("backend");
+});
+
 app.listen(port, async () => {
   // Connect to the database
   await dbConnection();
